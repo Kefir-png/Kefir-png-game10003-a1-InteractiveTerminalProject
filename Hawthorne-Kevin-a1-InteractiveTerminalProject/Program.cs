@@ -18,24 +18,22 @@ Console.WriteLine("hello, " + PlayerName);
 Console.WriteLine("are you a...");
 Console.WriteLine("?Alchemist? (s) apprentis \n?Diviner? (s) apprentis \n?Enchanter? (s) apprentis");
 string Proffession = Console.ReadLine();
+Proffession = Proffession.ToLower();
 
 //input results
 
-if (Proffession == "Alchemist")
+if (Proffession == "alchemist")
 {
-    Console.WriteLine("u r alc");
     isAlc = true;
 
 }
-else if (Proffession == "Diviner")
+else if (Proffession == "diviner")
 {
-    Console.WriteLine("u r div");
     isDiv = true;
 
 }
-else if (Proffession == "Enchanter")
+else if (Proffession == "enchanter")
 {
-    Console.WriteLine("u r ench");
     isEnc = true;
 }
 else
@@ -43,20 +41,30 @@ else
     Console.WriteLine("you esplode");
 }
 
-/*/setting using player information
-Console.Write(PlayerName);
-Console.Write(" is a ");
-Console.Write(Proffession);
-Console.Write("'s apprentis. ");
-Console.Write(PlayerName);
-Console.Write(" is running late to their apprentiship. ");
-Console.Write(PlayerName);
-Console.WriteLine(" should get going... \n?leave? apartment");
-*/
-//request player input to progress
-Console.ReadLine();
+
+if (isAlc == true)
 {
-    if (Console.ReadLine() == "leave")
+    Console.WriteLine("u r alch");
+}
+else if (isDiv == true)
+{
+    Console.WriteLine("ur div");
+}
+else if (isEnc == true)
+{
+    Console.WriteLine("ur ench");
+}
+
+Console.WriteLine();
+//setting using player information
+Console.WriteLine(PlayerName + " should get going... \n?leave? apartment");
+
+//request player input to progress
+string userInput = Console.ReadLine();
+userInput = userInput.ToLower();
+
+{
+    if (userInput == "leave")
     {
         Console.WriteLine(PlayerName + "aprouches their apartments front door. On the wood of the door a magical glyph is written. The glyph says...");
         Console.WriteLine("...");

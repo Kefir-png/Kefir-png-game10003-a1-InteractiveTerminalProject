@@ -41,7 +41,7 @@ Console.WriteLine();
 string proffession = Console.ReadLine();
 proffession = proffession.ToLower();
 
-//input results in changes to bool status. this will be important for the endings.
+//input results in changes to bool status. this will be important for the endings..
 
 if (proffession == "alchemist")
 {

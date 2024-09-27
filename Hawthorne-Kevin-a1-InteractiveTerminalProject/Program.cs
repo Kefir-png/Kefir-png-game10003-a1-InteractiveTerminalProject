@@ -2,11 +2,17 @@
 using System;
 using System.Net.Security;
 
+Console.ForegroundColor = ConsoleColor.Blue;
+Console.WriteLine("Yb        dP 88 8888P    db    88\"\"Yb 8888b.   .o. .dP\"Y8            \r\n Yb  db  dP  88   dP    dPYb   88__dP  8I  Yb ,dP' `Ybo.\"            \r\n  YbdPYbdP   88  dP    dP__Yb  88\"Yb   8I  dY      o.`Y8b            \r\n   YP  YP    88 d8888 dP\"\"\"\"Yb 88  Yb 8888Y\"       8bodP'            \r\n   db    88\"\"Yb 88\"\"Yb 88\"\"Yb 888888 88b 88 888888 88  dP\"\"b8 888888 \r\n  dPYb   88__dP 88__dP 88__dP 88__   88Yb88   88   88 dP   `\" 88__   \r\n dP__Yb  88\"\"\"  88\"\"\"  88\"Yb  88\"\"   88 Y88   88   88 Yb      88\"\"   \r\ndP\"\"\"\"Yb 88     88     88  Yb 888888 88  Y8   88   88  YboodP 888888 ");
+Console.WriteLine("In the game options for progression are marker with two question marks (i.e. ?Example?). \nWriting these words in the console will progress the game depending on your choice of words.");
+
 //setiing bools
 bool isAlc = false;
 bool isDiv = false;
 bool isEnc = false;
 
+//introduction
+Console.WriteLine();
 Console.WriteLine("You are a Wizards Apprentis");
 
 //requesting player input for name
@@ -55,13 +61,17 @@ else if (isEnc == true)
     Console.WriteLine("ur ench");
 }
 
+
+//break after the text
 Console.WriteLine();
 //setting using player information
+Console.WriteLine(PlayerName + " is running late to their apprentiship...");
 Console.WriteLine(PlayerName + " should get going... \n?leave? apartment");
 
 //request player input to progress
 string userInput = Console.ReadLine();
 userInput = userInput.ToLower();
+
 
 {
     if (userInput == "leave")
@@ -74,15 +84,14 @@ userInput = userInput.ToLower();
         Console.WriteLine("...");
         Console.WriteLine("What am i?");
     }
+    else if solution == "door"
+    {
+        ;
+    }
     else
     {
         Console.WriteLine("you esplode");
     }
 }
-//inproper input 
-
-//proper input progresses to riddle
-
-//proper input
-
-//inproper riddle input consequnses 
+string solution  = Console.ReadLine();
+solution = solution.ToLower();
